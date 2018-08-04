@@ -235,16 +235,4 @@ public static void rightClickOnElement(By by, String stepName){
 			System.out.println("ERROR : " + '\n' + "STEP NAME : " + stepName + '\n' + "Reason for Fail : No Element is found with given locator : " + by.toString());
 		}	
 	}
-
- public static void clickButton(By by,String stepName){
-	 try{
-		 WebElement element = Data.Common.driver.findElement(by);
-		 
-	 	} catch (NoSuchElementException nse){
-	 System.out.println("ERROR : " + '\n' + "STEP NAME : " + stepName + '\n' + "Reason for Fail : No Element is found with given locator : " + by.toString());
-	}	
-	 
-	 
-	 
- }
 }
