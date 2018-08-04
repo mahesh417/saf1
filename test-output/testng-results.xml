@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression" duration-ms="10066" started-at="2018-08-02T17:22:35Z" finished-at="2018-08-02T17:22:45Z">
+    <groups>
+    </groups>
+    <test name="ValidateCases" duration-ms="10066" started-at="2018-08-02T17:22:35Z" finished-at="2018-08-02T17:22:45Z">
+      <class name="tests.Cases">
+        <test-method status="PASS" signature="getEnvDetails(java.lang.String)[pri:0, instance:tests.Cases@36b4cef0]" name="getEnvDetails" is-config="true" duration-ms="16" started-at="2018-08-02T17:22:35Z" finished-at="2018-08-02T17:22:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEnvDetails -->
+        <test-method status="PASS" signature="initiateReport(org.testng.ITestContext)[pri:0, instance:tests.Cases@36b4cef0]" name="initiateReport" is-config="true" duration-ms="224" started-at="2018-08-02T17:22:35Z" finished-at="2018-08-02T17:22:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b7ff809]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiateReport -->
+        <test-method status="PASS" signature="CreateNewCase(java.lang.String)[pri:0, instance:tests.Cases@36b4cef0]" name="CreateNewCase" duration-ms="9426" started-at="2018-08-02T17:22:35Z" finished-at="2018-08-02T17:22:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewCase -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.Cases@36b4cef0]" name="endReport" is-config="true" duration-ms="409" started-at="2018-08-02T17:22:45Z" finished-at="2018-08-02T17:22:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- tests.Cases -->
+    </test> <!-- ValidateCases -->
+  </suite> <!-- Regression -->
+</testng-results>

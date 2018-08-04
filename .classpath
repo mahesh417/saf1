@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="Libraries/selenium/byte-buddy-1.8.3.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/client-combined-3.12.0-sources.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/client-combined-3.12.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/guava-23.6-jre.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/okhttp-3.9.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium/selenium-server-standalone-3.13.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/TestNg/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="Libraries/jna/jna-4.5.2.jar"/>
+	<classpathentry kind="lib" path="Libraries/jna/jna-platform-4.5.2.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="Libraries/ExtentReport/extentreports-3.1.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

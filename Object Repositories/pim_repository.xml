@@ -1,0 +1,4 @@
+<ObjectInfo>
+	<firstName locator="id" value="firstName"/>
+	<addElemployeeMenu locator="xpath" value=""/>
+</ObjectInfo>
