@@ -23,6 +23,7 @@ public class Data {
 		public static HashMap<String, String> executionConfigData;
 		public static Logger log4Logger;
 		public static Document objectRepository;
+		public static String mainWindowHandle;
 		
 	}
 

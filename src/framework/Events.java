@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.SkipException;
 
 
 public class Events {
@@ -65,6 +66,34 @@ public class Events {
 		}
 		
 		
+	}
+	
+// ********************************************************************************************
+	public static String getTextFromElement(By by, String stepName){
+		WebElement element = waitForElementToDisplay(by, stepName, 20);
+		String strElementText = "";
+		try{
+			strElementText= element.getText();
+		} catch (NullPointerException nse){
+			nse.printStackTrace();
+		}
+		
+		return strElementText;
+	}
+	
+//*********************************************************************************************
+	public static void clickElement(By by, String stepName){
+		WebElement element = waitForElementToDisplay(by, stepName, 20);
+		try {
+			if (element.isEnabled()){
+				element.click();
+			} else {
+				System.out.println("FAILED : " + stepName + " ; Unable to click on the element is Element is disabled.");
+			}
+		} catch (NullPointerException nse){
+			throw new SkipException("Execution stopped as there is not element found.");
+		}
+	
 	}
 	
 //*********************************************************************************************
@@ -121,6 +150,8 @@ public class Events {
 		
 		return element;
 	}
+//********************************************************************************************
+	
 	
 	
 //********************************************************************************************
