@@ -7,10 +7,9 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -36,6 +35,18 @@ public class Common {
 		
 		
 	}
+	
+	
+	public static void switchToMainWindow(){
+		
+		try{
+			Data.Common.driver.switchTo().window(Data.Common.mainWindowHandle);
+			
+		} catch (NoSuchWindowException nsw){
+			System.out.println("Main browser has been closed. Unable to switch to main window.");
+		}
+	}
+	
 	
 	@Test
 	 public void GenerateReport()
