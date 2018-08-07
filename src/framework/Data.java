@@ -25,6 +25,7 @@ public class Data {
 		public static Document objectRepository;
 		public static String mainWindowHandle;
 		
+		
 	}
 
 }
