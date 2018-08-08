@@ -7,9 +7,10 @@
     <classes>
       <class name="tests.Cases">
         <methods>
+          <include name="verify_permissions_for_verified_user" invocation-numbers="0"/>
           <include name="initiateReport"/>
-          <include name="CreateNewCase" invocation-numbers="0"/>
           <include name="getEnvDetails"/>
+          <include name="closeBrowsers"/>
           <include name="endReport"/>
         </methods>
       </class> <!-- tests.Cases -->

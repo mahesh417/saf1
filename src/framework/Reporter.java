@@ -35,12 +35,10 @@ public class Reporter extends Configuration {
 	@BeforeTest
 	 public void initiateReport(ITestContext ctx) throws IOException{
 		
-		 // setlog4jPropertyFile(ctx);
-		
 		 UtilityMethods.makePath(System.getProperty("user.dir")+Data.Common.executionConfigData.get("screenshotPath"));
 		 String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		 String logFilePath = System.getProperty("user.dir")+"\\"+Data.Common.executionConfigData.get("extentReportPath") +"\\" + ctx.getSuite().getName() + " - " + timeStamp +".html";
-		 System.out.println(logFilePath);
+		 
 		 Data.Common.htmlReporter = new ExtentHtmlReporter(logFilePath);
 		 Data.Common.extent = new ExtentReports();
 		
@@ -76,7 +74,7 @@ public class Reporter extends Configuration {
 	 * Takes a  screenshot when there is an assertion failure
 	 * @param locator - The current ID, Xpath etc. that has not been found on the page
 	 */
-	public String getScreenshot(String locator) 
+	public static String getScreenshot(String locator) 
 		{	
 			System.out.println("Taking screenshot of the page with the locator " + locator);
 			//Remove illegal file name characters from the locator
@@ -119,7 +117,7 @@ public class Reporter extends Configuration {
 	
 	//*******************************************************************************
 	
-	public String captureScreenshotToBase64(String imageName) {
+	public static String captureScreenshotToBase64(String imageName) {
 		String encodedfile="";
 		String ImagePath = getScreenshot(imageName);
 		
@@ -146,7 +144,7 @@ public class Reporter extends Configuration {
 	
 //*************************************************************************************************
 	
-	public void writeLog(String status, String stepName, String actualResult) {
+	public static void writeLog(String status, String stepName, String actualResult) {
 		Status stepStatus;
 		
 		switch (status.toLowerCase()) {
@@ -173,7 +171,7 @@ public class Reporter extends Configuration {
 
 	//*********************************************************************************************
 	
-	public void writeLog(String status, String stepName, String actualResult,String screenshotName) {
+	public static void writeLog(String status, String stepName, String actualResult,String screenshotName) {
 		Status stepStatus;
 		
 		switch (status.toLowerCase()) {

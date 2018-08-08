@@ -1,4 +1,0 @@
-<ObjectInfo>
-	<firstName locator="id" value="firstName"/>
-	<createCaseLink locator="xpath" value="//a[text()='create new case']"/>
-</ObjectInfo>

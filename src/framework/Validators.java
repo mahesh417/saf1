@@ -5,10 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class Validators {
 	
-	public void verifyValuePattern(String value, String pattern){
-		
-	}
-	
+
 	public void verifyPartialTextOfElement(By by, String expectedText, String stepName){
 		
 		WebElement element = Events.waitForElementToDisplay(by, stepName, 20);

@@ -1,0 +1,10 @@
+<ObjectInfo>
+	<Common>
+		<loginUserName locator="id" value="userName"/>
+		<loginPassword locator="id" value="passWord"/>
+		<loginButton locator="xpath" value="//xyz"/>
+		<objectAfterLogin locator="xpath" value="//dsada"/>
+	</Common>
+	<firstName locator="id" value="firstName"/>
+	<createCaseLink locator="xpath" value="//a[text()='create new case']"/>
+</ObjectInfo>
