@@ -7,36 +7,18 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchWindowException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Common {
-	@Parameters("browser")
-	@Test()
-	public void launchApplication(@Optional("chrome") String browser){
-		
-		
-		switch (browser.toLowerCase()) {
-		case "chrome":
-			Data.Common.driver = new ChromeDriver();
-			
-			break;
-		case "firefox":
-			Data.Common.driver = new FirefoxDriver();
-			break;
-		default:
-			break;
-		}
-		
-		
-		
-	}
-	
-	
 	public static void switchToMainWindow(){
 		
 		try{
@@ -48,7 +30,24 @@ public class Common {
 	}
 	
 	
-	@Test
+	public static void Login(String userName,String passWord){
+		
+		Events.enterValue(UtilityMethods.getBy_from_Repository("loginUserName"), userName, "Enter UserName");
+		Events.enterValue(UtilityMethods.getBy_from_Repository("loginPassword"), passWord, "Enter Password");
+		Events.clickElement(UtilityMethods.getBy_from_Repository("loginButton"), "Click on Login Button.");
+		
+		WebElement elementAfterLogin = Events.waitForElementToDisplay(UtilityMethods.getBy_from_Repository("objectAfterLogin"), "Click on Login button after entering the details.", 30);
+		
+		if (elementAfterLogin != null){
+			Reporter.writeLog("pass", "Login to the Application with User : " + userName, "Login is successful.", "Login to Application");
+		} else {
+			Reporter.writeLog("fail", "Login to the Application with User : " + userName, "Login is Failed.", "Login to Application");
+			Assert.assertTrue(false, "Skipping the test as login is failed.");
+			throw new SkipException("Execution has been stopped as login is failed.");
+		}
+	}
+	
+	
 	 public void GenerateReport()
 	    {
 	        try {

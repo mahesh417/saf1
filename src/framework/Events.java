@@ -54,7 +54,7 @@ public class Events {
 	}
 	
 //****************************************************************************************************
-	public void enterValue(By by,String strValue, String stepName){
+	public static void enterValue(By by,String strValue, String stepName){
 		
 		try{			
 			WebElement element = Data.Common.driver.findElement(by);			

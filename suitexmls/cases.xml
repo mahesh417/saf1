@@ -7,7 +7,8 @@
     <classes>
       <class name="tests.Cases">
         <methods>
-          <include name="CreateNewCase"/>
+          <include name="verify_permissions_for_verified_user"/>
+          <include name="verify_permissions_for_not_verified_user"/>
         </methods>
       </class> <!-- tests.Cases -->
     </classes>
